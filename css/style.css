@@ -1,18 +1,56 @@
+@font-face {
+    font-family: 'montserrat';
+    src: url('../font/Montserrat-Regular-webfont.eot');
+    src: url('../font/Montserrat-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/Montserrat-Regular-webfont.woff2') format('woff2'),
+         url('../font/Montserrat-Regular-webfont.woff') format('woff'),
+         url('../font/Montserrat-Regular-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'montserrat';
+    src: url('../font/Montserrat-Light-webfont.eot');
+    src: url('../font/Montserrat-Light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/Montserrat-Light-webfont.woff2') format('woff2'),
+         url('../font/Montserrat-Light-webfont.woff') format('woff'),
+         url('../font/Montserrat-Light-webfont.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'montserrat';
+    src: url('../font/Montserrat-Bold.eot');
+    src: url('../font/Montserrat-Bold.eot?#iefix') format('embedded-opentype'),
+         url('../font/Montserrat-Bold.woff2') format('woff2'),
+         url('../font/Montserrat-Bold.woff') format('woff'),
+         url('../font/Montserrat-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
 body {
   background-color: #f0f1f3;}
 
 img {
   position: absolute;
   left: 50%;
-  margin-left: -250px;
-  border: 2px solid white;
+  margin-left: -500px;
+  border: 2px solid #f0f1f3;
   border-radius: 10px;
   box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.5);
 
 }
 
 h1 {
+  display: hidden;
+  /*miert nem lehet?*/
+  font-family: "montserrat";
   text-align: center;
+  padding: 20px;
+  font-size: 20px;
   color: #f0f1f3;
   text-shadow:
    -1px -1px 0 #000,
@@ -24,8 +62,136 @@ h1 {
 .blackspot {
   color: black;
   text-shadow:
-  -1px -1px 0 #fff,
-   1px -1px 0 #fff,
-   -1px 1px 0 #fff,
-    1px 1px 0 #fff;
+  -2px -2px 0 #f0f1f3,
+   2px -2px 0 #f0f1f3,
+   -2px 2px 0 #f0f1f3,
+    2px 2px 0 #f0f1f3;
+}
+
+/*.form {
+  float: right;
+}*/
+
+form {
+  width: 504px;
+  height: 654px;
+  left: 50%;
+  background: #f0f1f3;
+  border-radius: 10px;
+  box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.25);
+  float: left;
+  position: absolute;
+  left: 50%;
+  margin-left: 50px;
+  font-family: "montserrat";
+
+}
+
+fieldset {
+  margin: 100px;
+}
+
+legend {
+  width: 100%;
+  height: 40px;
+  padding: 0px 13px;
+  font-weight: 300;
+  line-height: 40px;
+  text-align: center;
+  color: #eee;
+  border-radius: 2px;
+  margin-bottom: inherit;
+  background-color: #1b1314;
+  box-sizing: border-box;
+
+}
+
+
+label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 10px;
+}
+
+
+input[type="text"], input[type="password"] {
+  width: 100%;
+  height: 40px;
+  padding: 13px;
+  font-family: inherit;
+  margin-bottom: 10px;
+  line-height: 40px;
+  border-radius: 3px;
+  border: 1px solid rgba(74, 66, 97, 0.5);
+  box-shadow: inset 0 2px 2px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+
+input[type="submit"] {
+  position: absolute;
+  margin-top: 60px;
+  margin-left: 60px;
+  text-transform: uppercase;
+  width: 180px;
+  height: 48px;
+  font-weight: normal;
+  color: #eee;
+  font-size: 20px;
+  border: none;
+  border-radius: 3px;
+  box-shadow: inset 0 -3px 0px rgba(0,0,0,0.2);
+  background: black;
+
+}
+
+input[type="text"]:focus, input[type="password"]:focus {
+    outline: 1px solid rgb(82,73,107);
+    background-color: #fff;
+    height: 40px;
+}
+
+input:invalid {
+  background-color: #fff;
+}
+
+.remember {
+    background: #eee;
+    width: 300px;
+    margin-top: 5px;
+}
+
+.remember label {
+  font-size: 14px;
+  font-weight: 300;
+  padding: 10px;
+}
+
+
+
+/*input:checked {
+  width: 50px;
+  height: 50px;
+  padding: 20px;
+  background: green;
+}
+
+ez nem mukodik, kell egy fake-checkbox */
+
+input[type=checkbox] {
+  float: left;
+}
+
+.fake-checkbox {
+  float: left;
+  width: 20px;
+  height: 20px;
+  background: url(../img/darth_unchecked.png);
+  /*image-et is be tudnank illeszteni*/
+  /*border: 1px solid rgb(82,73,107);*/
+  margin-left: -22px;
+  margin-top: -3px;
+}
+
+input:checked + .fake-checkbox:before {
+  content: url(../img/darth_checked.png);
 }
