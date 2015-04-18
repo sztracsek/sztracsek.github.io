@@ -1,3 +1,13 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background: white;
+  color: #362f2d;
+  font: 1.5em/1.5 'Open Sans', arial, sans-serif;
+}
+
 .clearfix:before,
 .clearfix:after {
     content: " ";
@@ -12,16 +22,54 @@
     *zoom: 1;
 }
 
-body {
-  background: white;
-  color: #362f2d;
-}
-
 .wrapper {}
 
 .header {
+  /*height: 50px;*/
+  /*background: #f26d7d;*/
+}
+
+.logo {
+  background: #f26d7d;
+  margin: 0;
+  /*ezt csak itt kell megadni*/
+}
+
+.logo a {
+  background: url(img/logo_small.png);
+  display: block;
   height: 50px;
-  background: #f266dd;
+  width: 250px;
+  margin: 0 auto;
+  /*eltuntetjuk igy a szovegunket:*/
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.phone {
+  margin: 15px 20px;
+  /*dev*/
+  border: 1px solid #f26d7d;
+  border-radius: 10px;
+  line-height: 43px;
+  padding: 15px 20px;
+  text-align: center;
+}
+
+.phone a {
+  color: #007236;
+  font-size: 1.2em;
+  text-decoration: none;
+}
+
+.menu {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 50px;
+  /*dev*/ background: rgba(0, 255, 255,.5);
+  width: 50px;
 }
 
 .columns {}
@@ -57,10 +105,56 @@ body {
   .header {
     background: none;
     height: 195px;
+    padding-bottom: 25px;
   }
 
+  .logo {
+    float: left;
+    background: none;
+    margin: 20px 0 30px;
+  }
+  
+  .logo a {
+    height: 80px;
+    width: 480px;
+    background: url(img/logo_big.png);
+  }
+
+  .phone {
+  float: right;
+  /*height: auto;*/
+  line-height: 1.5;
+  margin-top: 30px;
+  width: 175px;
+  padding: 5px 0;
+  }
+
+  .phone a {
+    white-space: nowrap;
+    font-style: italic;
+    font-size: 1.5em;
+  }
+
+  .menu {
+    clear: both;
+    float: left;
+    height: 40px;
+    min-width: 200px;
+    position: static;
+  }
+
+  .facebook {
+    /*dev*/ background: rgba(255,0,255, .5);
+    display: block;
+    float: right;
+    height: 40px;
+    margin: 0;
+    /*dev*/min-width: 100px;
+  }
+
+
   /*columns*/
-  .columns{
+  .columns {
     background: #fff;
     padding: 30px;
   }
@@ -74,6 +168,7 @@ body {
     float: right;
     width: 286px;
   }
+
   .footer {
     background: none;
     height: 55px;
