@@ -1,0 +1,30 @@
+body {
+  background: white;
+  color: #362f2d;
+}
+
+.header {
+  height: 50px;
+  background: #f266dd;
+}
+
+.columns {}
+
+.content {
+    /*dev*/ background: rgba(255, 0, 0, .1);
+    min-height: 200px
+}
+
+.sidebar {
+  /*dev*/ background: rgba(0, 255, 0, .1);
+  min-height: 200px
+}
+
+.footer {
+  background: #f8b6be;
+  height: 85px;
+}
+
+@media screen and (min-width: 769px) {
+
+}
