@@ -29,6 +29,10 @@ body {
   /*background: #f26d7d;*/
 }
 
+#nav:target .header {
+  background: #f26d7d;
+}
+
 .logo {
   background: #f26d7d;
   margin: 0;
@@ -45,16 +49,21 @@ body {
   text-indent: 100%;
   white-space: nowrap;
   overflow: hidden;
+  z-index: 100;
+  position: relative;
 }
 
 .phone {
+  background: white;
   margin: 15px 20px;
   /*dev*/
   border: 1px solid #f26d7d;
   border-radius: 10px;
   line-height: 43px;
-  padding: 15px 20px;
+  padding: 7px 20px;
   text-align: center;
+  z-index: 100;
+  position: relative;
 }
 
 .phone a {
@@ -64,12 +73,80 @@ body {
 }
 
 .menu {
+  /*position: absolute;*/
+  /*right: 0;*/
+  /*top: 0;*/
+  /*menus varialas miatt*/
+  /*height: 50px;*/
+  /*dev background: rgba(0, 255, 255,.5);*/
   position: absolute;
-  right: 0;
   top: 0;
+  width: 100%;
+  background: #f26d7d;
+}
+
+.menu .toggle {
   height: 50px;
-  /*dev*/ background: rgba(0, 255, 255,.5);
   width: 50px;
+  background: #f26d7d;
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: #fff;
+  font-family: Arial;
+  text-align: center;
+  line-height: 50px;
+  font-weight: 300;
+  text-decoration: none;
+}
+
+#nav:target .menu ul {
+  display: block;
+  margin: 140px 0 0 0;
+}
+
+/*menu close*/
+
+.menu .close {
+  display: none;
+  text-decoration: none;
+}
+
+#nav:target .menu .close {
+  display: block;
+}
+
+.menu ul {
+  display: none;
+  /*eltunik a potty a menu elott*/
+  padding: 0;
+  margin: 0;
+}
+
+.menu li {
+  background: #f26d7d;
+}
+
+.menu ul a {
+  font-family: 'Open Sans';
+  font-weight: bold;
+  display: block;
+  font-size: 24px;
+  color: #ffffff;
+  text-decoration: none;
+  border-bottom: 1px solid #f8b6be;
+}
+
+.menu ul li:first-child {
+  border-top: 1px solid #f8b6be;
+}
+
+.menu ul li:last-child {
+  margin-bottom: 15px;
+}
+
+.facebook {
+  display: none;
 }
 
 .columns {}
@@ -108,12 +185,16 @@ body {
     padding-bottom: 25px;
   }
 
+  #nav:target .header {
+    background: none;
+  }
+
   .logo {
     float: left;
     background: none;
     margin: 20px 0 30px;
   }
-  
+
   .logo a {
     height: 80px;
     width: 480px;
@@ -124,7 +205,7 @@ body {
   float: right;
   /*height: auto;*/
   line-height: 1.5;
-  margin-top: 30px;
+  margin: 30px 0 0;
   width: 175px;
   padding: 5px 0;
   }
@@ -139,17 +220,51 @@ body {
     clear: both;
     float: left;
     height: 40px;
-    min-width: 200px;
     position: static;
+    background: none;
+    width: 700px;
   }
 
-  .facebook {
-    /*dev*/ background: rgba(255,0,255, .5);
+  .menu ul {
     display: block;
+    margin: 0;
+  }
+
+    .menu li {
+      display: inline-block;
+      padding: 0 10px;
+    }
+
+    .menu ul li:first-child {
+      border-top: none;
+    }
+
+    .menu ul li:last-child {
+      margin-bottom: none;
+    }
+
+  .menu ul a {
+    line-height: 40px;
+    text-align: center;
+    font-family: 'Open Sans';
+    font-weight: bold;
+    font-size: 18px;
+    border: none;
+  }
+
+  .menu .toggle {
+    display: none;
+  }
+
+  #nav:target .menu .close {
+    display: none;
+  }
+
+
+  .facebook {
     float: right;
     height: 40px;
     margin: 0;
-    /*dev*/min-width: 100px;
   }
 
 
